@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    padding: 20px;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+li:hover {
+    background: #222;
+}
+
+/* Efek glitch warna-warni */
+.colorful {
+    animation: rainbow 1s infinite;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+}
+
+/* Glitch Image Popup */
+#glitchImg {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 400px;
+    animation: shake 0.1s infinite alternate;
+}
+
+@keyframes shake {
+    from { transform: translate(-52%, -50%); }
+    to { transform: translate(-48%, -50%); }
+}
+
+#glitchImg {
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+}
+
+/* Tombol Mode */
+#modeSwitch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease;
+    z-index: 10000;
+}
+
+#modeSwitch:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+#modeIcon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#modeText {
+    font-size: 16px;
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+/* Animasi transisi mode */
+body {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Prolog */
+.prolog {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Iklan */
+#adsBox {
+    text-align: center;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+#adsImg {
+    width: 300px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+#adsImg:hover {
+    transform: scale(1.05);
+}
+
+.adsLine1, .adsLine2, .adsLine3 {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #ff4444;
+    transition: 0.3s;
+}
+
+/* TABEL */
+.tableGroup {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.tableGroup table {
+    border-collapse: collapse;
+    width: 200px;
+}
+
+.tableGroup td {
+    padding: 4px 10px;
+}
+
+/* ANIMASI BARU UNTUK 30 NAMA RANDOM */
+.randomAnim {
+    animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
