@@ -134,3 +134,34 @@ for (let i = 0; i < namaSorted.length; i += chunk) {
 document.getElementById("adsBox").addEventListener("click", () => {
     window.location.href = "https://go.rcvlink.com/go/?bp=cgPiIZjH9gN6-atCZn4tnuYBwTbAAk1tij7DjC-Jd9h9ty8ekaleI237wlB2sBCgh3sw21CHrPdeVahMjuuy__gAfcdIXd7GaW_sGrxMzqL8n70gbTXmmOvjVsISicKZ40L70A7nEYP4tg1fgyYxgmj8XYEO-aFQw-saM4qiainh9QOn-sgqLJ3clSVr54aDQI-gFTpU_Q&tp=7nkYT1BuauT7eBGhDtLtgBRZY82JVf9ND6R62pV8Cf5vDlYq6TxhbY2k-PMHYT8ccFDO3_ELFJgOHi3PTOL9ZRXewr3UmhhM5a8zemUrrik&rc=sJTc7NbZv2r62Q&cs=2.2.0.0.0.0.2&c=61.41.14-638947-541-23&d=61.7&s2=1&ver=251021-2120&pb=1&im=1-0.5-1-1-14300&ref=https%3A%2F%2F";
 });
+
+// === AUTO GLITCH CUMA 2x ===
+
+function autoGlitch() {
+    let img = document.getElementById("autoGlitch");
+
+    // bikin elemen kalau belum ada
+    if (!img) {
+        img = document.createElement("img");
+        img.id = "autoGlitch";
+        img.src = "realistic-vhs-effect-background.png";
+        document.body.appendChild(img);
+    }
+
+    // tampil 3 detik
+    img.style.display = "block";
+    setTimeout(() => {
+        img.style.display = "none";
+    }, 3000);
+}
+
+// glitch pertama muncul setelah 15 detik
+setTimeout(() => {
+    autoGlitch();
+
+    // glitch kedua 42 detik setelah glitch pertama selesai
+    setTimeout(() => {
+        autoGlitch();
+    }, 42000);
+
+}, 15000);

@@ -154,3 +154,22 @@ body {
     50% { opacity: 1; transform: scale(1.05); }
     100% { opacity: 0.5; transform: scale(1); }
 }
+
+#autoGlitch {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 99999;
+    display: none;
+    animation: glitchMove 3s linear infinite;
+}
+
+/* animasi gambar bergerak kiri-kanan */
+@keyframes glitchMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
